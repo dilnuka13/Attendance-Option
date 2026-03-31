@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-md3-2;
+  }
+
+  .glass-dark {
+    @apply bg-slate-900/70 backdrop-blur-xl border border-white/10 shadow-md3-2 text-white;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white rounded-md3-full px-6 py-2.5 font-medium hover:bg-primary-700 hover:shadow-md3-2 transition-all active:scale-95 disabled:opacity-50 disabled:active:scale-100;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary-100 text-primary-900 rounded-md3-full px-6 py-2.5 font-medium hover:bg-primary-200 hover:shadow-md3-1 transition-all active:scale-95 disabled:opacity-50 disabled:active:scale-100;
+  }
+
+  .input-field {
+    @apply w-full rounded-md3-md border border-on-surface-variant/30 px-4 py-3 bg-surface focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all shadow-sm;
+  }
+  
+  .card {
+    @apply bg-white rounded-md3-xl shadow-md3-1 border border-on-surface-variant/10 overflow-hidden;
+  }
+}
